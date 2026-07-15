@@ -2,20 +2,22 @@ import { useState, useEffect, useRef } from 'react'
 import './index.css'
 
 // ─── IMAGE PATHS ────────────────────────────────────────────
+// import.meta.env.BASE_URL = '/pizza-bites/' on GitHub Pages, '/' locally
+const BASE = import.meta.env.BASE_URL
 const IMGS = {
-  boxHero:      '/pizzabite_box_hero_1784131250538.png',
-  heroPizza:    '/pizzabite_hero_pizza_1784131259861.png',
-  chef:         '/pizzabite_chef_section_1784131278335.png',
-  ingredients:  '/pizzabite_ingredients_1784131288254.png',
-  margherita:   '/menu_pizza_margherita_1784131304245.png',
-  pepperoni:    '/menu_pizza_pepperoni_1784131312747.png',
-  veggie:       '/menu_pizza_veggie_1784131320170.png',
-  pasta:        '/menu_pasta_1784131336168.png',
-  bbq:          '/menu_pizza_bbq_1784131346101.png',
-  packaging:    '/pizzabite_packaging_1784131356612.png',
-  avatar1:      '/customer_avatar_1_1784131372804.png',
-  avatar2:      '/customer_avatar_2_1784131381636.png',
-  avatar3:      '/customer_avatar_3_1784131390327.png',
+  boxHero:      `${BASE}pizzabite_box_hero_1784131250538.png`,
+  heroPizza:    `${BASE}pizzabite_hero_pizza_1784131259861.png`,
+  chef:         `${BASE}pizzabite_chef_section_1784131278335.png`,
+  ingredients:  `${BASE}pizzabite_ingredients_1784131288254.png`,
+  margherita:   `${BASE}menu_pizza_margherita_1784131304245.png`,
+  pepperoni:    `${BASE}menu_pizza_pepperoni_1784131312747.png`,
+  veggie:       `${BASE}menu_pizza_veggie_1784131320170.png`,
+  pasta:        `${BASE}menu_pasta_1784131336168.png`,
+  bbq:          `${BASE}menu_pizza_bbq_1784131346101.png`,
+  packaging:    `${BASE}pizzabite_packaging_1784131356612.png`,
+  avatar1:      `${BASE}customer_avatar_1_1784131372804.png`,
+  avatar2:      `${BASE}customer_avatar_2_1784131381636.png`,
+  avatar3:      `${BASE}customer_avatar_3_1784131390327.png`,
 }
 
 // ─── INTERSECTION OBSERVER HOOK (fixed) ─────────────────────
